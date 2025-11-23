@@ -20,16 +20,17 @@ jobs:
           chmod +x build_app.sh
           ./build_app.sh
           
-      - name: Zip Application
+      - name: Create DMG
         run: |
-          zip -r CryptoMenuBar.zip CryptoMenuBar.app
+          chmod +x create_dmg.sh
+          ./create_dmg.sh
 
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
           tag_name: nightly-${{ github.run_number }}
           name: Nightly Release ${{ github.run_number }}
-          files: CryptoMenuBar.zip
+          files: CryptoMenuBar-Installer.dmg
           draft: false
           prerelease: false
         env:
