@@ -42,6 +42,32 @@ Download the latest release from the [Releases page](https://github.com/onlinefc
 3. Launch the app from Applications or Spotlight.
    从应用程序文件夹或 Spotlight 启动应用。
 
+### First Launch / 首次启动
+
+If you see a security warning saying the app is damaged or from an unidentified developer:
+如果您看到安全警告，提示应用已损坏或来自未识别的开发者：
+
+**Method 1 / 方法一：**
+1. Right-click (or Control-click) the app in Applications folder.
+   在应用程序文件夹中右键点击（或按住 Control 点击）应用。
+
+2. Select "Open" from the menu.
+   从菜单中选择"打开"。
+
+3. Click "Open" in the dialog that appears.
+   在出现的对话框中点击"打开"。
+
+**Method 2 / 方法二：**
+Run this command in Terminal:
+在终端中运行此命令：
+```bash
+xattr -cr /Applications/CryptoMenuBar.app
+```
+
+> **Note / 注意**: This security warning appears because the app is not code-signed with an Apple Developer certificate. The app is open source and safe to use.
+> 
+> 此安全警告出现是因为应用未使用 Apple 开发者证书进行代码签名。该应用是开源的，可以安全使用。
+
 ### Build from Source / 从源码构建
 
 If you prefer to build from source:
