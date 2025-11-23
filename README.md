@@ -24,10 +24,31 @@ A simple, native macOS Menu Bar application that displays real-time cryptocurren
 
 ![Dropdown Menu / 下拉菜单](screenshots/dropdown.png)
 
-## How to Run / 如何运行
+## Installation / 安装
 
-1. Open Terminal in this directory.
-   在此目录下打开终端。
+### Download / 下载
+
+Download the latest release from the [Releases page](https://github.com/onlinefchen/crypto_menu_bar/releases).
+从 [Releases 页面](https://github.com/onlinefchen/crypto_menu_bar/releases) 下载最新版本。
+
+### Install / 安装步骤
+
+1. Open the downloaded DMG file.
+   打开下载的 DMG 文件。
+
+2. Drag **CryptoMenuBar.app** to the **Applications** folder.
+   将 **CryptoMenuBar.app** 拖拽到 **Applications** 文件夹。
+
+3. Launch the app from Applications or Spotlight.
+   从应用程序文件夹或 Spotlight 启动应用。
+
+### Build from Source / 从源码构建
+
+If you prefer to build from source:
+如果您希望从源码构建：
+
+1. Clone this repository.
+   克隆此仓库。
 
 2. Run the build script:
    运行构建脚本：
