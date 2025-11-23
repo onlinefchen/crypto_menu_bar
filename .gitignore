@@ -1,0 +1,6 @@
+.DS_Store
+/.build
+/CryptoMenuBar.app
+/CryptoMenuBar.zip
+*.xcodeproj
+*.xcworkspace
