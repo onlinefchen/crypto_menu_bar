@@ -64,10 +64,19 @@ class AppState: ObservableObject {
     }
     
     func getAlignedLabel(for symbol: String) -> String {
-        let maxLen = symbols.map { $0.count }.max() ?? 0
-        let padded = symbol.padding(toLength: maxLen, withPad: " ", startingAt: 0)
+        let maxSymLen = symbols.map { $0.count }.max() ?? 0
+        
+        // Calculate max price length for alignment
+        let maxPriceLen = symbols.map { formattedPrice(for: $0).count }.max() ?? 0
+        
+        let paddedSymbol = symbol.padding(toLength: maxSymLen, withPad: " ", startingAt: 0)
         let price = formattedPrice(for: symbol)
-        return "\(padded) : \(price)"
+        
+        // Pad price to the left (by adding spaces before it)
+        let paddingNeeded = maxPriceLen - price.count
+        let paddedPrice = String(repeating: " ", count: max(0, paddingNeeded)) + price
+        
+        return "\(paddedSymbol) : \(paddedPrice)"
     }
     
     func addSymbol(_ symbol: String) {

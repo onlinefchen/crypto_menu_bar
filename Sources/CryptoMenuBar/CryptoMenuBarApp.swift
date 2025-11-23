@@ -17,7 +17,7 @@ struct CryptoMenuBarApp: App {
                     NSPasteboard.general.setString(price, forType: .string)
                 } label: {
                     Text(appState.getAlignedLabel(for: symbol))
-                        .font(.system(.body, design: .monospaced))
+                        .font(.custom("Courier New", size: 13).weight(.bold))
                 }
             }
             
